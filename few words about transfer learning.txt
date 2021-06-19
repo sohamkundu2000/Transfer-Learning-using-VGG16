@@ -15,4 +15,12 @@ The most common incarnation of transfer learning in the context of deep learning
 
 1) Here I first downloded the VGG-16 model trained on 'image net' dataset.
 2)Then I removed the Dense layers keeping only the convolutional layers.
-3)Then I freezed the weights 
+3)After that I freezed the weights of the convolution layer and added some fully connested dense layer and trained the model
+  with a learning rate 0.01 and a momentum=0.01 for 20 epochs.
+4)I resived 88% accuracy in that time.
+5)Then I unfreezed the weights of the convolution layers for ubdate and trained the hole model for 5 epochs with a very small
+ learning rate(sufficient learning rate can saturate the model, so we have to take care of it).
+6) In that time I recieved 97% accuracy over train data and 88% accuracy over test data,which is quite good as.
+
+**Cat vs Dog dataset contain more than 20000 images of cats and dogs with equal numbers but I used only 2000 of them to train the model.
+ That is the power of Transfer learning."
